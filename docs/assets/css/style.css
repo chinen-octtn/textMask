@@ -1,0 +1,95 @@
+@charset "UTF-8";
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+h1 {
+  color: red;
+}
+
+footer {
+  margin: 120px -10px -10px;
+  padding: 20px;
+  background: lightgray;
+}
+footer p {
+  font-size: 0.8rem;
+}
+
+.text {
+  margin-top: 60px;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 3rem;
+  font-weight: bold;
+  color: transparent;
+}
+
+.textMask {
+  margin-top: 60px;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  min-height: 500px;
+}
+
+.textMask__copy {
+  margin-top: 21px;
+  font-size: 2.6rem;
+  line-height: 1.33;
+}
+.is-value .textMask__copy {
+  font-size: 3.6rem;
+  font-feature-settings: "palt" 1;
+}
+
+.no-webp .textMask {
+  background-image: url(../img/bg.jpg);
+}
+
+@media print, screen and (min-width: 1000px) {
+  .textMask__copy {
+    margin-top: 32px;
+    font-size: 4.8rem;
+    letter-spacing: 0.015em;
+    line-height: 1.39;
+    color: transparent;
+  }
+  .textMask__copyMain {
+    display: block;
+    width: 336px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
+  }
+  .is-value .textMask__copyMain {
+    width: 353px;
+  }
+  .textMask__copySub {
+    position: relative;
+    display: block;
+    left: 336px;
+  }
+  .textMask__copySub span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  .textMask__copySub span::before {
+    content: attr(data-text);
+    transform: translateX(-336px);
+    font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
+    white-space: pre-line;
+    color: #fff;
+    display: block;
+  }
+  .is-value .textMask__copySub {
+    left: 353px;
+  }
+  .is-value .textMask__copySub span::before {
+    font-size: 6.9rem;
+    transform: translateX(-353px);
+  }
+}

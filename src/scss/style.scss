@@ -1,0 +1,115 @@
+@use './foundation/_define' as *;
+
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+h1 {
+  color: $color-main;
+}
+
+footer {
+  margin: 120px -10px -10px;
+  padding: 20px;
+  background: lightgray;
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.text {
+  margin-top: 60px;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  background-size: cover;
+  background-clip: text;
+  font-size: 3rem;
+  font-weight: bold;
+  color: transparent;
+}
+
+.textMask {
+  margin-top: 60px;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  min-height: 500px;
+  // background-clip: text;
+}
+
+.textMask__body {
+}
+
+.textMask__copy {
+  margin-top: 21px;
+  font-size: 2.6rem;
+  line-height: 1.33;
+
+  .is-value & {
+    font-size: 3.6rem;
+    font-feature-settings: 'palt' 1;
+  }
+
+  @include mq(pc) {
+    margin-top: 32px;
+    font-size: 4.8rem;
+    letter-spacing: 0.015em;
+    line-height: 1.39;
+    color: transparent;
+  }
+}
+
+.textMask__copyMain {
+  @include mq(pc) {
+    display: block;
+    width: 336px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Noto Sans JP', 'Helvetica Neue', Arial,
+      'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'メイリオ', 'Meiryo',
+      sans-serif;
+
+    .is-value & {
+      width: 353px;
+    }
+  }
+}
+
+.textMask__copySub {
+  @include mq(pc) {
+    position: relative;
+    display: block;
+    left: 336px;
+
+    span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      &::before {
+        content: attr(data-text);
+        transform: translateX(-336px);
+        font-family: 'Noto Sans JP', 'Helvetica Neue', Arial,
+          'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'メイリオ', 'Meiryo',
+          sans-serif;
+        white-space: pre-line;
+        color: #fff;
+        display: block;
+      }
+    }
+
+    .is-value & {
+      left: 353px;
+
+      span::before {
+        font-size: 6.9rem;
+        transform: translateX(-353px);
+      }
+    }
+  }
+}
+
+// webp非対応の場合
+.no-webp .textMask {
+  background-image: url(../img/bg.jpg);
+}

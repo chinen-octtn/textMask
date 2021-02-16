@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="index,follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="画像をテキストでマスク（切り取る）サンプルのHTML・CSSです。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/32406502?s=460&amp;u=c95783bbb59dceff3dbdca430e02632c421b18f5&amp;v=4">
+    <meta name="twitter:url" content="https://chinen-octtn.github.io/textMask/">
+    <meta name="twitter:description" content="画像をテキストでマスク（切り取る）サンプルのHTML・CSSです。">
+    <meta name="twitter:title" content="画像をテキストでマスク（切り取る）">
+    <meta property="og:description" content="画像をテキストでマスク（切り取る）サンプルのHTML・CSSです。">
+    <meta property="og:site_name" content="まぁしGitHub">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/32406502?s=460&amp;u=c95783bbb59dceff3dbdca430e02632c421b18f5&amp;v=4">
+    <meta property="og:url" content="https://chinen-octtn.github.io/textMask/">
+    <meta property="og:title" content="画像をテキストでマスク（切り取る）">
+    <title>画像をテキストでマスク（切り取る）</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="./assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>画像をテキストでマスク（切り取る）</h1>
+      <p>テキストの後ろに画像が透けているイメージ</p>
+    </header>
+    <main>
+      <p class="text">テキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクする</p>
+      <pre>.text {
+  margin-top: 60px;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  background-size: cover;
+  background-clip: text;
+  font-size: 3rem;
+  font-weight: bold;
+  color: transparent;
+}
+</pre>
+    </main>
+  </body>
+</html>
