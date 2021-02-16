@@ -118,6 +118,10 @@ pre {
 }
 
 // webp非対応の場合
+.no-webp .text {
+  background-image: url(../img/bg.jpg);
+}
+
 .no-webp .textMask {
   background-image: url(../img/bg.jpg);
 }

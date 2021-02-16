@@ -21,7 +21,7 @@
     <meta property="og:title" content="画像をテキストでマスク（切り取る）">
     <title>画像をテキストでマスク（切り取る）</title>
     <link href="./assets/css/style.css" rel="stylesheet">
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/modernizr.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN0ZF6QEVW"></script>
     <script>
@@ -34,7 +34,10 @@
   <body>
     <header>
       <h1>画像をテキストでマスク（切り取る）</h1>
-      <p>テキストの後ろに画像が透けているイメージ</p><img src="./assets/img/bg.webp" alt="参考用の海の写真" height="100">
+      <p>テキストの後ろに画像が透けているイメージ</p>
+      <picture>
+        <source type="image/webp" srcset="./assets/img/bg.webp"><img src="./assets/img/bg.jpg" alt="参考用の海の写真" height="100">
+      </picture>
     </header>
     <main>
       <p class="text">テキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクする</p>

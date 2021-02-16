@@ -52,6 +52,10 @@ pre {
   font-feature-settings: "palt" 1;
 }
 
+.no-webp .text {
+  background-image: url(../img/bg.jpg);
+}
+
 .no-webp .textMask {
   background-image: url(../img/bg.jpg);
 }

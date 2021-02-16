@@ -2,4 +2,6 @@ header
   h1 画像をテキストでマスク（切り取る）
   p テキストの後ろに画像が透けているイメージ
 
-  img(src="./assets/img/bg.webp", alt="参考用の海の写真" height="100")
+  picture
+    source(type="image/webp" srcset="./assets/img/bg.webp")
+    img(src="./assets/img/bg.jpg", alt="参考用の海の写真" height="100")
