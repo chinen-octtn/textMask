@@ -22,6 +22,7 @@ footer p {
 pre {
   border: 5px dotted lightblue;
   padding: 20px;
+  overflow: auto;
 }
 
 .text {
