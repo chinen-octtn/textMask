@@ -2,7 +2,7 @@
 テキストの後ろに画像が透けているイメージ
 
 
-[サンプルページ]()
+[サンプルページ](https://github.com/chinen-octtn/textMask)
 
 
 ## ローカル開発環境
