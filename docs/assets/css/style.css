@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 10px;
   padding: 0;
@@ -6,6 +5,11 @@ body {
 
 h1 {
   color: red;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 footer {
@@ -25,6 +29,10 @@ pre {
   overflow: auto;
 }
 
+.title {
+  text-align: center;
+}
+
 .text {
   margin-top: 60px;
   background: url(../img/bg.webp) no-repeat 0 50%;
@@ -37,71 +45,90 @@ pre {
 }
 
 .textMask {
-  margin-top: 60px;
-  background: url(../img/bg.webp) no-repeat 0 50%;
-  min-height: 500px;
+  margin: 60px auto 0;
+  max-width: 1000px;
+  position: relative;
+  background: url(../img/bg.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.textMask::before {
+  content: "";
+  width: 30vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
 }
 
-.textMask__copy {
-  margin-top: 21px;
-  font-size: 2.6rem;
-  line-height: 1.33;
-}
-.is-value .textMask__copy {
-  font-size: 3.6rem;
-  font-feature-settings: "palt" 1;
+.textMask__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  position: relative;
+  z-index: 0;
+  background: url(../img/bg.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
-.no-webp .text {
-  background-image: url(../img/bg.jpg);
+.textMask__title {
+  font-size: 6vw;
+  color: transparent;
+  overflow: hidden;
 }
 
-.no-webp .textMask {
+.textMask__title-main {
+  display: block;
+  width: 30vw;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.textMask__title-sub {
+  position: relative;
+  left: 30vw;
+  width: 100vw;
+  display: block;
+}
+.textMask__title-sub span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100vw;
+}
+.textMask__title-sub span::before {
+  content: attr(data-title);
+  display: block;
+  white-space: pre-line;
+  color: #333;
+  transform: translateX(-30vw);
+  width: 100vw;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 60px 0;
+}
+
+.no-webp .text,
+.no-webp .textMask__title,
+.no-webp .textMask__image {
   background-image: url(../img/bg.jpg);
 }
 
 @media print, screen and (min-width: 1000px) {
-  .textMask__copy {
-    margin-top: 32px;
-    font-size: 4.8rem;
-    letter-spacing: 0.015em;
-    line-height: 1.39;
-    color: transparent;
+  h1 {
+    text-align: center;
   }
-  .textMask__copyMain {
-    display: block;
-    width: 336px;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
+  .textMask__body {
+    min-height: 500px;
   }
-  .is-value .textMask__copyMain {
-    width: 353px;
-  }
-  .textMask__copySub {
-    position: relative;
-    display: block;
-    left: 336px;
-  }
-  .textMask__copySub span {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-  }
-  .textMask__copySub span::before {
-    content: attr(data-text);
-    transform: translateX(-336px);
-    font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
-    white-space: pre-line;
-    color: #fff;
-    display: block;
-  }
-  .is-value .textMask__copySub {
-    left: 353px;
-  }
-  .is-value .textMask__copySub span::before {
-    font-size: 6.9rem;
-    transform: translateX(-353px);
+  .textMask__title {
+    font-size: 4rem;
   }
 }

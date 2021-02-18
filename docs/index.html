@@ -34,12 +34,14 @@
   <body>
     <header>
       <h1>画像をテキストでマスク（切り取る）</h1>
-      <p>テキストの後ろに画像が透けているイメージ</p>
-      <picture>
-        <source type="image/webp" srcset="./assets/img/bg.webp"><img src="./assets/img/bg.jpg" alt="参考用の海の写真" height="100">
-      </picture>
+      <div class="section">
+        <p>テキストの後ろに画像が透けているイメージ</p>
+        <picture>
+          <source type="image/webp" srcset="./assets/img/bg.webp"><img src="./assets/img/bg.jpg" alt="参考用の海の写真" height="100">
+        </picture>
+      </div>
     </header>
-    <main>
+    <main class="section">
       <p class="text">テキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクする</p>
       <pre>.text {
   margin-top: 60px;
@@ -51,6 +53,19 @@
   color: transparent;
 }
 </pre>
+      <hr>
+      <section>
+        <h2 class="title">重なりを応用すると交差したデザインもできます。</h2>
+        <div class="textMask">
+          <div class="textMask__body">
+            <h2 class="textMask__title"><span class="textMask__title-main">画像に重ねてテキストで<br>マスクするサンプル</span><span class="textMask__title-sub">
+                <span data-title="画像に重ねてテキストで
+                マスクするサンプル"></span>
+                </span></h2>
+          </div>
+        </div>
+        <p>写真の上に乗る部分だけ別に色にするのが難しく、同じテキストを重ねて表示するようにしています。<br>スマートな方法があれば教えて下さい。</p><a href="https://twitter.com/chocodogmagic">Twitter</a>
+      </section>
     </main>
     <footer>
       <p><a href="https://github.com/chinen-octtn/textMask">GitHubソースコード</a></p>

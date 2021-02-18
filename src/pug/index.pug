@@ -5,7 +5,7 @@ block css
 block js
 
 block body
-  main
+  main.section
     p.text テキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクするテキストでマスクする
 
     pre.
@@ -19,9 +19,17 @@ block body
         color: transparent;
       }
 
-    //- section.textMask
-    //-   .textMask__body
-    //-     h2.textMask__title
-    //-       span.textMask__title-main 画像と重ねてテキストでマスクする（調整中）
-    //-       span.textMask__title-sub(data-title="画像をテキストでマスクする")
+    hr
 
+    section
+      h2.title 重なりを応用すると交差したデザインもできます。
+      .textMask
+        .textMask__body
+          h2.textMask__title
+            span.textMask__title-main 画像に重ねてテキストで<br>マスクするサンプル
+            span.textMask__title-sub.
+              <span data-title="画像に重ねてテキストで
+              マスクするサンプル"></span>
+
+      p 写真の上に乗る部分だけ別に色にするのが難しく、同じテキストを重ねて表示するようにしています。#[br]スマートな方法があれば教えて下さい。
+      a(href="https://twitter.com/chocodogmagic") Twitter

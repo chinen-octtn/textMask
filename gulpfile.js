@@ -268,6 +268,7 @@ exports.watch = watch;
 
 // デフォルトタスク
 exports.default = gulp.series(
-  gulp.parallel(pug, sass, js, image),
+  // gulp.parallel(pug, sass, js, image),
+  gulp.parallel(pug, sass, image),
   gulp.parallel(serve, watch),
 );
