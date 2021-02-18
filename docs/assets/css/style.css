@@ -1,10 +1,17 @@
+@charset "UTF-8";
 body {
   margin: 10px;
   padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", "Meiryo", sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1 {
   color: red;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .section {
@@ -34,22 +41,22 @@ pre {
 }
 
 .text {
-  margin-top: 60px;
+  margin: 30px 0;
   background: url(../img/bg.webp) no-repeat 0 50%;
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: transparent;
 }
 
 .textMask {
-  margin: 60px auto 0;
+  margin: 60px auto;
   max-width: 1000px;
   position: relative;
   background: url(../img/bg.webp) no-repeat 0 0;
-  background-size: 100% auto;
+  background-size: 110% auto;
 }
 .textMask::before {
   content: "";
@@ -62,22 +69,21 @@ pre {
 }
 
 .textMask__body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 150px;
-  position: relative;
-  z-index: 0;
-  background: url(../img/bg.webp) no-repeat 0 0;
-  background-size: 100% auto;
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .textMask__title {
   font-size: 6vw;
   color: transparent;
   overflow: hidden;
+  background: url(../img/bg.webp) no-repeat 0 50%;
+  background-size: 110% auto;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .textMask__title-main {
@@ -116,8 +122,8 @@ hr {
 }
 
 .no-webp .text,
-.no-webp .textMask__title,
-.no-webp .textMask__image {
+.no-webp .textMask,
+.no-webp .textMask__title {
   background-image: url(../img/bg.jpg);
 }
 
@@ -125,8 +131,11 @@ hr {
   h1 {
     text-align: center;
   }
+  .text {
+    font-family: 3rem;
+  }
   .textMask__body {
-    min-height: 500px;
+    min-height: 380px;
   }
   .textMask__title {
     font-size: 4rem;
