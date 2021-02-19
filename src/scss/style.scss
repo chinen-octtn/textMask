@@ -64,7 +64,7 @@ pre {
   margin: 60px auto;
   max-width: 1000px;
   position: relative;
-  background: url(../img/bg.webp) no-repeat 0 0;
+  background: url(../img/bg.webp) no-repeat 0 50%;
   background-size: 110% auto;
 
   &::before {
@@ -127,7 +127,7 @@ pre {
       content: attr(data-title);
       display: block;
       white-space: pre-line;
-      color: #333;
+      color: #fff;
       transform: translateX(-30vw);
       width: 100vw;
     }
